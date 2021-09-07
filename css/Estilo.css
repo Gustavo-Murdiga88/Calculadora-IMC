@@ -1,0 +1,74 @@
+.box-central{
+    display: inline-block;
+    position: absolute;
+    position: relative;
+    width: 40%;
+    max-width: 1200px;
+    min-width: none;
+    max-height: auto;
+    min-height: none;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 28%;
+    background-color: #FFF;
+    z-index: 4;
+    border-radius: 30px;
+    box-shadow: 1px -6px 0px 10px rgb(201, 201, 201);
+    font-family: Marker Felt, fantasy;
+    font-size: 15px;
+}
+
+.divisor{
+    position: absolute;
+    padding-top: 33%;
+    width: 100%;
+    background-color: rgb(28, 137, 226);
+    z-index: 1;
+}
+
+h2{
+    text-align: center;
+    height: 2%;
+    font-family: Impact, fantasy; 
+    background-color:#FFF;
+}
+
+input{
+    color: black;
+    outline: 2px solid aqua;
+
+}
+fieldset{
+    border: hidden;
+}
+
+hr{
+    border:hidden;
+}
+
+.box-central{
+    
+    background-color: #FFF;
+}
+body{
+    position: relative;
+    background-color: rgb(170, 170, 170);
+
+}
+
+.botao{
+    position: absolute;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.titulo{
+    position: absolute;
+    padding-left: 35%;
+    padding-right: 20%;
+}
+
+input{
+    font-size: 12px;
+    font-weight: bold;
+}

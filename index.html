@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf8">
+        <Title>Calculadora IMC</Title>
+        <link href="css/Estilo.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    </head>
+    <body>
+    <div class ="divisor"></div>
+        <div class="box-central">   
+            <h2 class ="centro">Calculadora de IMC</h2>
+                <hr>
+                    <fieldset>
+                        <span>
+                            <br>
+                            <div><span id="labelNome">Nome</span><input type="text" id="txtNome" placeholder="Digite seu Nome"/></div>
+                            <div><span id="labelNome">Idade</span><input type="number" id="txtidade" placeholder="Digite sua idade"/></div>
+                            <div><span id="labelAltura">Altura</span><input type="number" id="numAltura" placeholder="Digite sua Altura"/></div>
+                            <div><span id="labelPeso">Peso</span><input type="number" id="numPeso" placeholder="Digite seu peso "/></div>
+                            <hr>
+                            <br>
+                            <!--Botões-->
+                            <div class="botao"><button class="waves-effect waves-light btn" id="btn-calcular">Calcular</button>
+                                <button class="waves-effect waves-light btn" id="btn-relatorios">Relatórios</button>
+                                <button class="waves-effect waves-light btn" id="btn-limpar">Limpar</button>
+                            </div>
+                            <!--Botões-->
+                            <br>
+                            <br>
+                        </span>  
+                        <span>
+                            <h2>Resultados</h2>
+                            <div><span id="labelNome">Nome</span><span id=""><input type="text" id="ElNome" disabled=""></span></div>
+                            <div><span id="labelNome">Idade</span><span id=""><input type="text" id="Elidade" disabled=""></span></div>
+                            <div><span id="labelNome">Altura</span><span id=""><input type="text" id="ElAltura" disabled=""></span></div>
+                            <div><span id="labelNome">Peso</span><span id=""><input type="text" id="ElPeso" disabled=""></span></div>
+                            <div><span id="labelNome">Situação</span><span id=""><input type="text" id="ElSituacao" disabled=""></span></div>
+                        </span>
+                        <hr>
+                        <span>
+                            <h2>Relatórios</h2>
+                            <ol id="lista">
+                            </ol>
+                        </span>
+                    </fieldset>
+                <hr>
+        </div> 
+    </body>
+    <script src="js/Controller.js"></script>
+    <script src="js/funcoes.js"></script>
+</html>
