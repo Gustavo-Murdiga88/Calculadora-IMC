@@ -9,9 +9,10 @@
     <body>
     <div class ="divisor"></div>
         <div class="box-central">   
+        
+            <fieldset>
             <h2 class ="centro">Calculadora de IMC</h2>
                 <hr>
-                    <fieldset>
                         <span>
                             <br>
                             <div><span id="labelNome">Nome</span><input type="text" id="txtNome" placeholder="Digite seu Nome"/></div>
@@ -21,9 +22,15 @@
                             <hr>
                             <br>
                             <!--Botões-->
-                            <div class="botao"><button class="waves-effect waves-light btn" id="btn-calcular">Calcular</button>
+                            <div class="botao ">
+                                <span class = "conteudo"><button class="waves-effect waves-light btn" id="btn-calcular">Calcular</button>
+                                </span>
+                                <span class = "conteudo">
                                 <button class="waves-effect waves-light btn" id="btn-relatorios">Relatórios</button>
+                                </span>
+                                <span class = "conteudo">
                                 <button class="waves-effect waves-light btn" id="btn-limpar">Limpar</button>
+                                </span>
                             </div>
                             <!--Botões-->
                             <br>
@@ -49,4 +56,5 @@
     </body>
     <script src="js/Controller.js"></script>
     <script src="js/funcoes.js"></script>
-</html>
+    
+    </html>
