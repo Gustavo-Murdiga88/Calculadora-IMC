@@ -1,15 +1,15 @@
 .box-central{
-    display: inline-block;
-    position: absolute;
+    display: flex;
+    flex-flow:column;
+    justify-content: center;
     position: relative;
-    width: 40%;
-    max-width: 1200px;
-    min-width: none;
-    max-height: auto;
-    min-height: none;
+    align-content: center;
+    max-width: 950px;
+    width: 50%;
     margin-top: 2%;
     margin-bottom: 2%;
-    margin-left: 28%;
+    margin-left: 25%;
+    margin-right: 25%;
     background-color: #FFF;
     z-index: 4;
     border-radius: 30px;
@@ -17,6 +17,7 @@
     font-family: Marker Felt, fantasy;
     font-size: 15px;
 }
+
 
 .divisor{
     position: absolute;
@@ -36,10 +37,12 @@ h2{
 input{
     color: black;
     outline: 2px solid aqua;
-
+    width: 10%;
 }
 fieldset{
     border: hidden;
+    border-left: 30x;
+    border-right: 30px;
 }
 
 hr{
@@ -51,16 +54,29 @@ hr{
     background-color: #FFF;
 }
 body{
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: wrap;
     background-color: rgb(170, 170, 170);
+    max-width: 100%;
+    min-width: 500px;
+    max-height: auto;
+    min-height: 600px;
 
 }
 
-.botao{
-    position: absolute;
-    padding-left: 20%;
-    padding-right: 20%;
+.conteudo::before{
+    content: "aaa";
+    color: transparent;
 }
+.botao{  
+
+    display: flex;
+    flex-flow:row;
+    justify-content: center;
+}
+
 
 .titulo{
     position: absolute;
@@ -69,6 +85,24 @@ body{
 }
 
 input{
+    position: inherit;
     font-size: 12px;
     font-weight: bold;
+}
+
+.teste{
+    position: relative;
+    width: 100px;
+    height: 30px;
+}
+.teste::before{
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 7px;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-right: 5px solid yellow;
+    border-left: 5px solid transparent;
+    vertical-align: text-top;
 }
