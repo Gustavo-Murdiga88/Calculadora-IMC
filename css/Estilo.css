@@ -4,8 +4,9 @@
     justify-content: center;
     position: relative;
     align-content: center;
-    max-width: 950px;
+    /*max-width: 950px;*/
     width: 50%;
+    height: 100%;
     margin-top: 2%;
     margin-bottom: 2%;
     margin-left: 25%;
