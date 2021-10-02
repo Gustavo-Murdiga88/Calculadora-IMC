@@ -34,7 +34,7 @@ function MostraPaciente(paciente){
 }
 
 
-function lerPaciente(){
+function lerPaciente(){ 
     var inputNome = document.getElementById("txtNome");
     var inputIdade = document.getElementById("txtidade")
     var inputPeso = document.getElementById("numPeso");
@@ -51,11 +51,21 @@ function lerPaciente(){
 
 function GeraRelatorio(pacientes){
     var Relatorio = document.getElementById("lista");
-    Relatorio.innerHTML = ""; //zera a lista
+    var indice = 0;
+    if(pacientes.length > 0 ){
+    Relatorio.innerHTML = "<thead><th class='tabela'>ID</th class='tabela'><th class='tabela'>Nome</th class='tabela'><th class='tabela'>Idade</th class='tabela'><th class='tabela'>IMC</th class='tabela'><th class='tabela'>Situação</th class='tabela'></thead>"
+    }
     pacientes.forEach((paciente) => {
         var imc = Calculaimc(paciente.peso, paciente.altura).toFixed(2);
         var situacao = valorImc(imc); 
-        Relatorio.innerHTML += `<li>${paciente.nome} - Idade: ${paciente.idade} Anos - IMC: ${imc} - ${situacao}</li>`;
+        
+        Relatorio.innerHTML += `<tr>
+                                    <td class='tabela'>${indice += 1}</td>
+                                    <td class='tabela'>${paciente.nome}</td>
+                                    <td class='tabela'>${paciente.idade}</td>
+                                    <td class='tabela'>${imc}</td>
+                                    <td class='tabela'>${situacao}</td>
+                                </tr>`;
     });
 }
 
@@ -69,4 +79,14 @@ function limpadados(){
     var Peso = document.getElementById("numPeso").value ="";
     var Altura = document.getElementById("numAltura").value="";
     var idade = document.getElementById("txtidade").value="";
+}
+
+function ArrayLimpo(paciente){
+
+    while(paciente.length > 0){
+     paciente.pop();
+    }
+    
+
+    return paciente
 }

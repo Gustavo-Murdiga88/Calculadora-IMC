@@ -12,21 +12,38 @@
     margin-right: 25%;
     background-color: #FFF;
     z-index: 4;
-    border-radius: 30px;
-    box-shadow: 1px -6px 0px 10px rgb(201, 201, 201);
+    border-radius: 10px;
     font-family: Marker Felt, fantasy;
     font-size: 15px;
 }
+.box-central:hover{
+    box-shadow: 1px -4px 11px 5px;
+}
 
 
-.divisor{
+/*.divisor{
     position: absolute;
     padding-top: 33%;
     width: 100%;
     background-color: rgb(28, 137, 226);
     z-index: 1;
+}*/
+
+.tabela{
+    text-align: center;
+    border-collapse: collapse;
+    vertical-align: middle;
 }
 
+.tabela, th, td{
+    padding-left: 5%;
+}
+
+
+td{
+    text-align: center;
+    vertical-align: middle;
+}
 h2{
     text-align: center;
     height: 2%;
@@ -58,16 +75,17 @@ body{
     flex-direction: row;
     justify-content: center;
     flex-flow: wrap;
-    background-color: rgb(170, 170, 170);
-    max-width: 100%;
+    max-width: auto;
     min-width: 500px;
     max-height: auto;
     min-height: 600px;
+    background-image: linear-gradient(rgb(28, 137, 226), white 70%);
+    background-repeat: no-repeat;
 
 }
 
 .conteudo::before{
-    content: "aaa";
+    content: "a";
     color: transparent;
 }
 .botao{  

@@ -16,3 +16,9 @@ var botaolimparlista = document.getElementById("btn-limpar");
 botaolimparlista.addEventListener('click', function(){
 LimparLista(Pacientes);
 });
+
+var botaolimparlista = document.getElementById("btn-limpar2");
+botaolimparlista.addEventListener('click', function(){
+    ArrayLimpo(Pacientes);
+    LimparLista(Pacientes);
+});
