@@ -53,7 +53,13 @@ function GeraRelatorio(pacientes){
     var Relatorio = document.getElementById("lista");
     var indice = 0;
     if(pacientes.length > 0 ){
-    Relatorio.innerHTML = "<thead><th class='tabela'>ID</th class='tabela'><th class='tabela'>Nome</th class='tabela'><th class='tabela'>Idade</th class='tabela'><th class='tabela'>IMC</th class='tabela'><th class='tabela'>Situação</th class='tabela'></thead>"
+    Relatorio.innerHTML = ` <thead>
+                                <th class='tabela'>ID</th>
+                                <th class='tabela'>Nome</th>
+                                <th class='tabela'>Idade</th>
+                                <th class='tabela'>IMC</th'>
+                                <th class='tabela'>Situação</th>
+                            </thead> `
     }
     pacientes.forEach((paciente) => {
         var imc = Calculaimc(paciente.peso, paciente.altura).toFixed(2);
