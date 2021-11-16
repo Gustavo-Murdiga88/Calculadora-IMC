@@ -1,9 +1,8 @@
 .box-central{
     display: flex;
-    flex-flow:column;
+    flex-flow:column wrap;
     justify-content: center;
     position: relative;
-    align-content: center;
     /*max-width: 950px;*/
     width: 60%;
     height: 100%;
@@ -89,15 +88,10 @@ body{
 
 }
 
-.conteudo::before{
-    content: "a";
-    color: transparent;
-}
 .botao{  
-
     display: flex;
     flex-flow:row;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 
@@ -128,4 +122,24 @@ input{
     border-right: 5px solid yellow;
     border-left: 5px solid transparent;
     vertical-align: text-top;
+}
+
+
+.fa-calculator{
+    font-size: 6em; 
+    display: inline-flex;
+}
+
+.fas{
+    display: inline-flex;
+}
+
+.cabecalho{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+
 }
