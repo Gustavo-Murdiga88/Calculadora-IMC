@@ -11,8 +11,12 @@ if (imc < 18.5){
     situacao = "Normal";
 }else if(imc < 30){
     situacao = "Sobrepeso";
+}else if(imc < 34.9){
+    situacao = "Obesidade 1";
+}else if(imc < 39.9){
+    situacao="Obesidade 2";
 }else{
-    situacao="obesidade";
+    situacao="Obesidade 3";
 }
 return situacao;
 }
