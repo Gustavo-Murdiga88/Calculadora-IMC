@@ -1,76 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-    <head>
+<head>
 
-        <meta charset="utf8">
-        <meta name="viewport" content="width=device-width">
-        <link href="fontawesome/css/all.css" rel="stylesheet">
-        <Title>Calculadora IMC</Title>
+    <meta charset="utf8">
+    <link href="fontawesome/css/all.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Title>Calculadora IMC</Title>
 
-        <link href="css/Estilo.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="css/Estilo.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    </head>
-    
-    <body>
-    
-    <div class ="divisor"></div>
-        <div class="box-central">   
-        
-            <fieldset>
-            <div class = "cabecalho">
-                    <i class="fas fa-calculator"></i>
-                    <h2>Calculadora de IMC</h2>
-            </div>    
-                        <span>
-                            <br>
-                            <div><span id="labelNome">Nome</span><input type="text" id="txtNome" placeholder="Digite seu Nome"/></div>
-                            <div><span id="labelNome">Idade</span><input type="number" id="txtidade" placeholder="Digite sua idade"/></div>
-                            <div><span id="labelAltura">Altura</span><input type="number" id="numAltura" placeholder="Digite sua Altura"/></div>
-                            <div><span id="labelPeso">Peso</span><input type="number" id="numPeso" placeholder="Digite seu peso "/></div>
-                            <hr>
-                            <br>
-                            <!--Botões-->
-                            <div class="botao ">
-                                <span class = ""><button class="waves-effect waves-light btn" id="btn-calcular">Calcular</button>
-                                </span>
-                                <span class = "conteudo">
-                                <button class="waves-effect waves-light btn" id="btn-relatorios">Relatórios</button>
-                                </span>
-                                <span class = "conteudo">
-                                <button class="waves-effect waves-light btn" id="btn-limpar">Ocultar</button>
-                                </span>
-                                <span class = "conteudo">
-                                    <button class="waves-effect waves-light btn" id="btn-limpar2">Limpar Relatório</button>
-                                 </span>
-                            </div>
-                            <!--Botões-->
-                            <br>
-                            <br>
-                        </span>  
-                        <span>
-                            <h2>Resultados</h2>
-                            <div><span id="labelNome">Nome</span><span id=""><input type="text" id="ElNome" disabled=""></span></div>
-                            <div><span id="labelNome">Idade</span><span id=""><input type="text" id="Elidade" disabled=""></span></div>
-                            <div><span id="labelNome">Altura</span><span id=""><input type="text" id="ElAltura" disabled=""></span></div>
-                            <div><span id="labelNome">Peso</span><span id=""><input type="text" id="ElPeso" disabled=""></span></div>
-                            <div><span id="labelNome">Situação</span><span id=""><input type="text" id="ElSituacao" disabled=""></span></div>
-                        </span>
-                        <hr>
-                        <span>
-                            <h2>Relatórios</h2>
-                            <table class="tabela" id="lista">
-                            </table>
-                        </span>
-                    </fieldset>
-                <hr>
-        </div> 
-    <!--<div class="teste">pppppppppppppppppppppppp</div>-->
-    </body>
+</head>
 
-    <script src="js/Controller.js"></script>
-    
-    <script src="js/funcoes.js"></script>
-    
-    </html>
+<body>
+    <div class='dispflex'>
+        <div class="box-central mgleft box">
+            <div class="cabecalho">
+                <i class="fas fa-calculator"></i>
+                <h2>Calculadora de IMC</h2>
+            </div>
+        <div class='disinput'>
+            <div class='inputflex'>
+                <span id="labelNome">Nome</span><input type="text" id="txtNome" placeholder="Digite seu Nome" />
+            </div>
+            <div class='inputflex'>
+                <span id="labelNome">Idade</span><input type="number" id="txtidade" placeholder="Digite sua idade" />
+            </div>
+            <div class='inputflex'>
+                <span id="labelAltura">Altura</span><input type="number" id="numAltura"
+                    placeholder="Digite sua Altura" />
+            </div>
+            <div class='inputflex'>
+                <span id="labelPeso">Peso</span><input type="number" id="numPeso" placeholder="Digite seu peso" />
+            </div>
+        </div>
+            <!--Botões-->
+            <div class="botao">
+                <span class="">
+                    <button class="waves-effect waves-light btn" id="btn-calcular">Calcular</button>
+                </span>
+                <span class="">
+                    <button class="waves-effect waves-light btn" id="btn-relatorios">Relatórios</button>
+                </span>
+                <span class="">
+                    <button class="waves-effect waves-light btn" id="btn-limpar">Ocultar</button>
+                </span>
+                <span class="">
+                    <button class="waves-effect waves-light btn" id="btn-limpar2">Limpar Relatório</button>
+                </span>
+            </div>
+            <!--Botões-->
+            <br>
+            <br>
+        </div>
+        <div class='box-central mgright box'>
+            <h2>Resultados</h2>
+        <div class='disinput box'>
+                <div class ='inputflex'>
+                    <span id="labelNome">Nome</span><span id=""><input type="text" id="ElNome" disabled=""></span>
+                </div>
+                <div class ='inputflex'>
+                    <span id="labelNome">Idade</span><span id=""><input type="text" id="Elidade" disabled=""></span>
+                </div>
+                <div class ='inputflex'>
+                    <span id="labelNome">Altura</span><span id=""><input type="text" id="ElAltura" disabled=""></span>
+                </div>
+                <div class ='inputflex'>
+                    <span id="labelNome">Peso</span><span id=""><input type="text" id="ElPeso" disabled=""></span>
+                </div>
+                <div class ='inputflex'>
+                    <span id="labelNome">Situação</span><span id=""><input type="text" id="ElSituacao"
+                            disabled=""></span>
+                </div>
+                <div class='inputflex visible'>
+                    <span id="labelNome">Situação</span><span id=""><input type="text" id="ElSituacao"
+                            disabled=""></span>
+                </div>
+            </div>
+        </div>
+
+        <div class='box-central relgrow'>
+            <span>
+                <h2>Relatórios</h2>
+                <table class="tabela" id="lista">
+                </table>
+            </span>
+        </div>
+    </div>
+</body>
+
+<script src="js/Controller.js"></script>
+
+<script src="js/funcoes.js"></script>
+
+</html>

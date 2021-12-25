@@ -1,29 +1,47 @@
 .box-central{
-    display: flex;
-    flex-flow:column wrap;
-    justify-content: center;
-    position: relative;
     /*max-width: 950px;*/
-    width: 60%;
-    height: 100%;
+    width: 40%;
+    height: 40%;
     margin-top: 2%;
-    margin-bottom: 2%;
-    margin-left: 20%;
-    margin-right: 20%;
-    background-color: #FFF;
-    z-index: 4;
     border-radius: 10px;
     font-family: Marker Felt, fantasy;
     font-size: 15px;
 }
+
 .box-central:hover{
     box-shadow: 1px -4px 11px 5px;
 }
 
-@viewport {
-    width: device-width;
-    zoom: 1;
-  }
+.mgright{
+    margin-right: 100px;
+}
+
+.mgleft{
+    margin-left: 100px;
+}
+
+.relgrow{
+    flex-grow: 2;
+    margin-left: 130px;
+    margin-right: 130px;
+}
+
+.dispflex{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin:0px 0px 0px 0px;
+}
+
+.disinput{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 30px 20px 30px 20px;
+}
+.visible{
+    visibility:hidden;
+}
 
 /*.divisor{
     position: absolute;
@@ -58,12 +76,10 @@ h2{
 input{
     color: black;
     outline: 2px solid aqua;
-    width: 10%;
 }
-fieldset{
-    border: hidden;
-    border-left: 30x;
-    border-right: 30px;
+
+.inputflex{
+    width: 35%;
 }
 
 hr{
@@ -75,23 +91,20 @@ hr{
     background-color: #FFF;
 }
 body{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-flow: wrap;
     max-width: auto;
     min-width: 500px;
     max-height: auto;
     min-height: 600px;
-    background-image: linear-gradient(rgb(28, 137, 226), white 70%);
+    background-image: linear-gradient(rgb(28, 137, 226), white 90%);
     background-repeat: no-repeat;
 
 }
 
 .botao{  
     display: flex;
-    flex-flow:row;
+    flex-flow:row wrap;
     justify-content: space-evenly;
+    padding: 0px 35px 0px 35px;
 }
 
 
