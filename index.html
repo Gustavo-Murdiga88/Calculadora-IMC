@@ -3,73 +3,86 @@
 
 <head>
 
-    <meta charset="utf8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="fontawesome/css/all.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <Title>Calculadora IMC</Title>
 
-    <link href="css/Estilo.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="css/Estilo.css" rel="stylesheet">
 
 </head>
 
 <body>
+
+    <header>
+        <div class="header">
+            <img class='imgheader' src="./img/GM DEV2.png" alt="">
+
+            <ul calss='ulcenter'>
+                <li class='li'>Home</li>
+                <li class='li'>Git</li>
+                <li class='li'>História</li>
+            </ul>
+        </div>
+    </header>
     <div class='dispflex'>
-        <div class="box-central mgleft box">
+        <div class="box-central box">
             <div class="cabecalho">
                 <i class="fas fa-calculator"></i>
-                <h2>Calculadora de IMC</h2>
+                <h2 class="fonth2">Calculadora de IMC</h2>
             </div>
-        <div class='disinput'>
-            <div class='inputflex'>
-                <span id="labelNome">Nome</span><input type="text" id="txtNome" placeholder="Digite seu Nome" />
+            <div class='disinput'>
+                <div class='inputflex'>
+                    <span id="labelNome">Nome</span><input type="text" id="txtNome" placeholder="Digite seu Nome" />
+                </div>
+                <div class='inputflex'>
+                    <span id="labelNome">Idade</span><input type="number" id="txtidade"
+                        placeholder="Digite sua idade" />
+                </div>
+                <div class='inputflex'>
+                    <span id="labelAltura">Altura</span><input type="text" id="numAltura"
+                        placeholder="Digite sua Altura" maxlength='4' onkeypress="mascara(this)" />
+                </div>
+                <div class='inputflex'>
+                    <span id="labelPeso">Peso</span><input type="number" id="numPeso" placeholder="Digite seu peso" />
+                </div>
             </div>
-            <div class='inputflex'>
-                <span id="labelNome">Idade</span><input type="number" id="txtidade" placeholder="Digite sua idade" />
-            </div>
-            <div class='inputflex'>
-                <span id="labelAltura">Altura</span><input type="number" id="numAltura"
-                    placeholder="Digite sua Altura" />
-            </div>
-            <div class='inputflex'>
-                <span id="labelPeso">Peso</span><input type="number" id="numPeso" placeholder="Digite seu peso" />
-            </div>
-        </div>
             <!--Botões-->
             <div class="botao">
-                <span class="">
+                <span class="btncolor">
                     <button class="waves-effect waves-light btn" id="btn-calcular">Calcular</button>
                 </span>
-                <span class="">
+                <span class="btncolor">
                     <button class="waves-effect waves-light btn" id="btn-relatorios">Relatórios</button>
                 </span>
-                <span class="">
+                <span class="btncolor">
                     <button class="waves-effect waves-light btn" id="btn-limpar">Ocultar</button>
                 </span>
-                <span class="">
+                <span class="btncolor">
                     <button class="waves-effect waves-light btn" id="btn-limpar2">Limpar Relatório</button>
                 </span>
             </div>
             <!--Botões-->
-            <br>
-            <br>
         </div>
-        <div class='box-central mgright box'>
-            <h2>Resultados</h2>
-        <div class='disinput box'>
-                <div class ='inputflex'>
+        <div class='box-central'>
+            <h2 class="fonth2">Resultados</h2>
+            <div class='disinput box'>
+                <div class='inputflex'>
                     <span id="labelNome">Nome</span><span id=""><input type="text" id="ElNome" disabled=""></span>
                 </div>
-                <div class ='inputflex'>
+                <div class='inputflex'>
                     <span id="labelNome">Idade</span><span id=""><input type="text" id="Elidade" disabled=""></span>
                 </div>
-                <div class ='inputflex'>
-                    <span id="labelNome">Altura</span><span id=""><input type="text" id="ElAltura" disabled=""></span>
+                <div class='inputflex'>
+                    <span id="labelNome">Altura</span><span id=""><input type="text" id="ElAltura" disabled=""
+                            step="0.01" min="0.00"></span>
                 </div>
-                <div class ='inputflex'>
+                <div class='inputflex'>
                     <span id="labelNome">Peso</span><span id=""><input type="text" id="ElPeso" disabled=""></span>
                 </div>
-                <div class ='inputflex'>
+                <div class='inputflex'>
                     <span id="labelNome">Situação</span><span id=""><input type="text" id="ElSituacao"
                             disabled=""></span>
                 </div>
@@ -80,14 +93,58 @@
             </div>
         </div>
 
-        <div class='box-central relgrow'>
+        <div class='box-central mgbottom relgrow'>
             <span>
-                <h2>Relatórios</h2>
-                <table class="tabela" id="lista">
+                <h2 class="fonth2">Relatórios</h2>
+                <table class="tabela striped" id="lista">
                 </table>
             </span>
         </div>
     </div>
+    <footer class="footer">
+        <div class="container ">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Gustavo Murdiga</h5>
+                    <p class="grey-text text-lighten-4"> Aplicação desenvolvida para aplicar os conhecimentos
+                        adquiridos.
+                    <h5 class="white-text">Redes sociais</h5>
+                    <ul>
+                        <li><i class="fab fa-linkedin"></i><a class="grey-text text-lighten-3" href="#!"> Linkedin</a>
+                        </li>
+                        <li><i class="fab fa-github"></i><a class="grey-text text-lighten-3" href="#!"> GitHub</a></li>
+                    </ul>
+                    <h5 class="white-text">Empresa</h5>
+                    <ul>
+                    <img class='imgheader' src="./img/GM DEV2.png" alt="">
+                    </p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Sobre</h5>
+                    <ul>
+                        <li>Estudando de Analise de Dados</a></li>
+                        <li>Entusiasta por Técnologia</a></li>
+                        <li>Conhecimentos em desenvolvimento</a></li>
+                    </ul>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Conhecimentos</h5>
+                    <ul>
+                        <li>Python(Django)</a></li>
+                        <li>HTML, CSS, JS</a></li>
+                        <li>Conhecendo REACT.JS</a></li>
+                        <li>SQL</li>
+                        <li>DEVOPS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="containerfooter">
+                © 2021 Copyright Text by GMDEV Tecnologia since 2021
+            </div>
+        </div>
+    </footer>
 </body>
 
 <script src="js/Controller.js"></script>

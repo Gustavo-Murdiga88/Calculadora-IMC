@@ -92,11 +92,24 @@ function limpadados(){
 }
 
 function ArrayLimpo(paciente){
-
     while(paciente.length > 0){
      paciente.pop();
     }
-    
-
     return paciente
 }
+
+function mascara(altura){ 
+    if(altura.value.length == 1)
+    {
+        altura.value = altura.value + '.' ; 
+    }
+    if(altura.value > 2 ){
+        alert("Valor inválido Altere o Valor da altura");
+        limpadados();
+    }
+}
+
+
+
+
+

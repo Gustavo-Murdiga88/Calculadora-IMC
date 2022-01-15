@@ -1,36 +1,95 @@
 .box-central{
-    /*max-width: 950px;*/
-    width: 40%;
-    height: 40%;
-    margin-top: 2%;
+    width: 48%;
+    height: auto;
+    margin: 2% 10px;
     border-radius: 10px;
     font-family: Marker Felt, fantasy;
     font-size: 15px;
+    background-color: #FFF;
 }
+
+.ulcenter, .li {
+    list-style: none;
+    display: inline-table;
+    color: white;
+    height: 125px;
+    width: 120px;
+    text-align:center;
+    padding-top: 50px;
+
+}
+
+.ulcenter{
+    display: flex;
+    justify-content: center;
+}
+
+.ulcenter, .li:hover{
+    background-color: white;
+    color: black;
+}
+
+.info{
+    position: absolute;
+}
+
+
+.imgheader{
+    display: inline-block;
+    height: 125px;
+    width: 125px;
+}
+
+.header{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 125px;
+    width: auto;
+    margin: 0px auto;
+    background-color: black;
+    z-index: 100;
+}
+.btn{
+    background-color: black;
+}
+.btn:hover{
+    background-color: gray;
+    color: oldlace;
+}
+
 
 .box-central:hover{
     box-shadow: 1px -4px 11px 5px;
+
 }
 
 .mgright{
-    margin-right: 100px;
+    margin-right: 3%;
+}
+
+.mgbottom {
+    margin-bottom: 2%;
 }
 
 .mgleft{
-    margin-left: 100px;
+    margin-left: 3%px;
 }
 
 .relgrow{
-    flex-grow: 2;
-    margin-left: 130px;
-    margin-right: 130px;
+    flex-grow:2;
+    margin: 2% 5%;
 }
 
 .dispflex{
+    position: relative;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
-    margin:0px 0px 0px 0px;
+    justify-content: space-around;
+    width: auto;
+    max-width: 1200px;
+    margin: 0% auto;
 }
 
 .disinput{
@@ -51,14 +110,12 @@
     z-index: 1;
 }*/
 
-.tabela{
-    text-align: center;
-    border-collapse: collapse;
-    vertical-align: middle;
-}
 
-.tabela, th, td{
-    padding-left: 5%;
+.tabela{
+    margin-bottom: 2%;
+    text-align: center;
+    padding-left: 8%;
+   
 }
 
 
@@ -66,9 +123,10 @@ td{
     text-align: center;
     vertical-align: middle;
 }
-h2{
+
+.fonth2{
     text-align: center;
-    height: 2%;
+    font-size: 2.56rem;;
     font-family: Impact, fantasy; 
     background-color:#FFF;
 }
@@ -86,25 +144,17 @@ hr{
     border:hidden;
 }
 
-.box-central{
-    
-    background-color: #FFF;
-}
-body{
-    max-width: auto;
-    min-width: 500px;
-    max-height: auto;
-    min-height: 600px;
-    background-image: linear-gradient(rgb(28, 137, 226), white 90%);
-    background-repeat: no-repeat;
 
+body{
+    background-repeat: no-repeat;
 }
 
 .botao{  
     display: flex;
     flex-flow:row wrap;
-    justify-content: space-evenly;
-    padding: 0px 35px 0px 35px;
+    justify-content: space-around;
+    margin: 4% 7%;
+
 }
 
 
@@ -155,4 +205,14 @@ input{
     align-items: center;
     align-content: center;
 
+}
+
+.footer{
+    background-color: black;
+    color: white;
+    padding-bottom: 2%;
+}
+
+.containerfooter{
+    text-align: center;
 }
